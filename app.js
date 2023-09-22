@@ -1,3 +1,13 @@
+let gold
+let food
+let land
+
+let houses
+let farms
+let banks
+
+
+
 // formulas for tracking current resources and spending resources
 
 
@@ -13,4 +23,6 @@
 //win conditions?
 //house with most resources after X turns? or until only 1 house standing?
 // or add logic for houses to concede defeat and "bend the knee" and after all X number of houses concede determine winner?
+
+
 
