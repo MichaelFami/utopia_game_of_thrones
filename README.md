@@ -2,6 +2,7 @@
 
 Recreating a simpler version of Utopia browser strategy game
 This will have themes from game of thrones provided by the api at https://anapioficeandfire.com/
+I might have to use multiple API since there doesn't seem to be a single API which meets all my needs. 
 
 I will endeavor to add the mechanics for the player to spend resources on buildings that generate more resources which lead to building an army and then fighting other armies. ie with D amount of gold I can afford to build X farms which yield Y bushels of food per day which can then feed Z number of army units. Or build X number of houses which yield Y amount of gold per day in tax revenue etc.
 If that proves to be too ambitious I will stick to just creating the mechanics on the battles between the armies and I will assign different sized armies to each house based on the size of their military in the books. 
