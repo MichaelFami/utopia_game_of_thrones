@@ -1,3 +1,9 @@
 table, th, td {
     border: 1px solid;
   }
+
+  #screenContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
