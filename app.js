@@ -1,30 +1,3 @@
-let gold;
-let food;
-let land;
-
-let houses;
-let farms;
-let banks;
-
-const housesBuiltStat = document.querySelector("#housesBuilt");
-const farmsBuiltStat = document.querySelector("#farmsBuilt");
-const banksBuiltStat = document.querySelector("#banksBuilt");
-const buildButton = document.querySelector("#buildButton");
-const battleButtons = document.querySelectorAll(".battleButton");
-
-const currentGold = document.querySelector("#currentGold");
-const currentFood = document.querySelector("#currentFood");
-const currentLand = document.querySelector("#currentLand");
-
-const goldPerTurn = document.querySelector("#goldPerTurn");
-const foodPerTurn = document.querySelector("#foodPerTurn");
-
-const currentGenerals = document.querySelector("#currentGenerals");
-const currentSoldiers = document.querySelector("#currentSoldiers");
-const currentCavalry = document.querySelector("#currentCavalry");
-const currentArchers = document.querySelector("#currentArchers");
-const currentTrebuchets = document.querySelector("#currentTrebuchets");
-const currentDragons = document.querySelector("#currentDragons");
 
 const players = [
   {
@@ -75,10 +48,17 @@ dropDownList.onchange = (e) => {
           dragons: 0,
         },
       }
+    }
+    for (let i = 0; i < players.length; i++) {
+     
       
+    let j=i+1
+    
+      
+    
 htmlToAdd+=`
 <div id="player${[i]}Screen">
-<h3>Player ${[i]}</h3>
+<h3>Player ${[j]}</h3>
 <table class="buildingsTable">
     <tr><th>Buildings</th></tr>
     <tr>
@@ -94,14 +74,14 @@ htmlToAdd+=`
     <tr>
         <th>Houses</th>
         <td>5 gold and 1 land</td>
-        <td id="housesBuilt${[i]}">
+        <td class="housesBuilt" id="housesBuilt${[i]}">
             
         </td>
-        <td id="housesUnderConstruction${[i]}">
+        <td class="housesUnderConstruction" id="housesUnderConstruction${[i]}">
             
         </td>
         <td>
-            <input id="buildHouseInput${[i]}"></input> 
+            <input class="buildHouseInput" id="buildHouseInput${[i]}"></input> 
         </td>
         
     </tr>
@@ -152,7 +132,7 @@ htmlToAdd+=`
         </td>
     </tr>
 </table>
-<button id="buildButton">Build</button>
+<button id="buildButton${[i]}">Build</button>
 <table id="resourcesTable">
     <tr><th>Resources</th></tr>
     <tr>
@@ -165,27 +145,27 @@ htmlToAdd+=`
     </tr>
     <tr>
         <th>Gold</th>
-        <td id="currentGold">
+        <td class="currentGold" id="currentGold${[i]}">
             
         </td>
-        <td id="goldPerTurn"></td>
+        <td id="goldPerTurn${[i]}"></td>
     </tr>
     <tr>
         <th>Food</th>
-        <td id="currentFood">
+        <td class="currentFood" id="currentFood${[i]}">
             
         </td>
-        <td id="foodPerTurn"></td>
+        <td id="foodPerTurn${[i]}"></td>
     </tr>
     <tr>
         <th>Land</th>
-        <td id="currentLand">
+        <td class="currentLand" id="currentLand${[i]}">
             
         </td>
     </tr>
     
 </table>
-<table id="militaryTable">
+<table class="militaryTable">
     <tr><th>Military</th></tr>
     <tr>
         <th>
@@ -197,68 +177,68 @@ htmlToAdd+=`
     </tr>
     <tr>
         <th>Generals</th>
-        <td id="currentGenerals">
+        <td id="currentGenerals${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitGeneralInput"></input> 
+            <input id="recruitGeneralInput${[i]}"></input> 
         </td>
     </tr>
     <tr>
         <th>Soldiers</th>
-        <td id="currentSoldiers">
+        <td id="currentSoldiers${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitSoldierInput"></input> 
+            <input id="recruitSoldierInput${[i]}"></input> 
         </td>
 
     </tr>
     <tr>
         <th>Cavalry</th>
-        <td id="currentCavalry">
+        <td id="currentCavalry${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitCavalryInput"></input> 
+            <input id="recruitCavalryInput${[i]}"></input> 
         </td>
     </tr>
     <tr>
         <th>Archers</th>
-        <td id="currentArchers">
+        <td id="currentArchers${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitArcherInput"></input> 
+            <input id="recruitArcherInput${[i]}"></input> 
         </td>
     </tr>
     <tr>
         <th>Trebuchets</th>
-        <td id="currentTrebuchets">
+        <td id="currentTrebuchets${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitTrebuchetInput"></input> 
+            <input id="recruitTrebuchetInput${[i]}"></input> 
         </td>
     </tr>
     <tr>
         <th>Dragons</th>
-        <td id="currentDragons">
+        <td id="currentDragons${[i]}">
             
         </td>
         <td></td>
         <td>
-            <input id="recruitDragonInput"></input> 
+            <input id="recruitDragonInput${[i]}"></input> 
         </td>
     </tr>
     
 </table>
-<button id="recruitButton">Recruit</button>
+<button id="recruitButton${[i]}">Recruit</button>
 <table id="opponentsTable">
     <tr><th>Opponents</th></tr>
     <tr>
@@ -335,8 +315,55 @@ screenContainer.innerHTML=htmlToAdd
 
 
 
-  console.log(players);
 };
+
+let gold;
+let food;
+let land;
+
+let houses;
+let farms;
+let banks;
+
+let housesBuiltStatsAll = document.querySelectorAll(".housesBuilt");
+const farmsBuiltStat = document.querySelector("#farmsBuilt");
+const banksBuiltStat = document.querySelector("#banksBuilt");
+const buildButton = document.querySelector("#buildButton");
+const battleButtons = document.querySelectorAll(".battleButton");
+
+const currentGold = document.querySelector("#currentGold");
+const currentFood = document.querySelector("#currentFood");
+const currentLand = document.querySelector("#currentLand");
+
+const goldPerTurn = document.querySelector("#goldPerTurn");
+const foodPerTurn = document.querySelector("#foodPerTurn");
+
+const currentGenerals = document.querySelector("#currentGenerals");
+const currentSoldiers = document.querySelector("#currentSoldiers");
+const currentCavalry = document.querySelector("#currentCavalry");
+const currentArchers = document.querySelector("#currentArchers");
+const currentTrebuchets = document.querySelector("#currentTrebuchets");
+const currentDragons = document.querySelector("#currentDragons");
+
+
+
+
+const buildHouses=()=>{
+  for (let i = 0; i < housesBuiltStatsAll.length; i++) {
+    let housesBuiltSpecific = housesBuiltStatsAll[i];
+  let housesBuiltId=document.querySelector(`#${housesBuiltSpecific}`) 
+    housesBuiltId.innerHTML = players[i].houses;
+  
+    console.log("i built a house")
+  }
+
+  
+
+}
+
+
+
+
 
 const starkResources = {
   gold: 200,
@@ -382,9 +409,10 @@ const renderStats = () => {
 };
 
 const init = () => {
-  state = {
-    ...players[0],
-  };
+  // state = {
+  //   ...players[0],
+  // };
+  
 
   cycles = 0;
 
@@ -402,8 +430,9 @@ const runGame = () => {
   if (cycles < 1000) {
     // updateStats()
 
-    generateResources();
+    // generateResources();
     console.log("i updated");
+    console.log(housesBuiltStatsAll)
   } else {
     return gameOver();
   }
@@ -510,6 +539,7 @@ battleButtons.forEach((button) => {
 buildButton.addEventListener("click", handleBtnClick);
 
 init();
+
 
 // formulas for tracking current resources and spending resources
 
