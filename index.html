@@ -10,22 +10,7 @@
 </head>
 <body>
     <div>
-        <form action="#">
-            <label for="numberOfPlayers">How many players?</label>
-<select name="numberOfPlayers" id="numberOfPlayers">
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    
-</select>
-
-        </form>
+       
         
     </div>
     <div id="screenContainer">
@@ -53,7 +38,7 @@
                     
                 </td>
                 <td>
-                    <input id="buildHouseInput"></input> 
+                    <input id="buildHouseInput" value="0"></input> 
                 </td>
                 
             </tr>
@@ -68,7 +53,7 @@
                     
                 </td>
                 <td>
-                    <input id="buildFarmInput"></input> 
+                    <input id="buildFarmInput" value="0"></input> 
                 </td>
             </tr>
             <tr>
@@ -82,7 +67,7 @@
                     
                 </td>
                 <td>
-                    <input id="buildBankInput"></input> 
+                    <input id="buildBankInput" value="0"></input> 
                 </td>
             </tr>
             <tr>
@@ -210,70 +195,13 @@
             </tr>
             
         </table>
-        <button id="recruitButton">Recruit</button>
-        <table id="opponentsTable">
-            <tr><th>Opponents</th></tr>
-            <tr>
-                <th>
-
-                </th>
-                <th>Military Size</th>
-                <th>Amount of Land</th>
-                <th>Amount of Gold</th>
-                <th>Battle</th>
-            </tr>
-            <tr>
-                <th>Stark</th>
-                <td id="starkArmy">
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    <button class="battleButton" id="stark">Battle!</button> 
-                 </td>
-            </tr>
-            <tr>
-                <th>Lannister</th>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    <button class="battleButton" id="lannister">Battle!</button> 
-                 </td>
-            </tr>
-            <tr>
-                <th>Targaryen</th>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                   <button class="battleButton" id="targaryen">Battle!</button> 
-                </td>
-            </tr>
-           
-        </table>
+        <button id="recruitButton">Recruit</button> <button class="battleButton" id="stark">Battle!</button> 
+        
 
     </div>
     <div id="playerTwoScreen">
         <h3>Player Two</h3>
-        <table id="buildingsTable">
+        <table id="buildingsTableTwo">
             <tr><th>Buildings</th></tr>
             <tr>
                 <th>
@@ -288,14 +216,14 @@
             <tr>
                 <th>Houses</th>
                 <td>5 gold and 1 land</td>
-                <td id="housesBuilt">
+                <td id="housesBuiltTwo">
                     
                 </td>
-                <td id="housesUnderConstruction">
+                <td id="housesUnderConstructionTwo">
                     
                 </td>
                 <td>
-                    <input id="buildHouseInput"></input> 
+                    <input id="buildHouseInputTwo" value="0"></input> 
                 </td>
                 
             </tr>
@@ -303,28 +231,28 @@
                 <th>Farms</th>
                 <td>5 gold and 1 land</td>
 
-                <td id="farmsBuilt">
+                <td id="farmsBuiltTwo">
                     
                 </td>
-                <td id="farmsUnderConstruction">
+                <td id="farmsUnderConstructionTwo">
                     
                 </td>
                 <td>
-                    <input id="buildFarmInput"></input> 
+                    <input id="buildFarmInputTwo" value="0"></input> 
                 </td>
             </tr>
             <tr>
                 <th>Banks</th>
                 <td>10 gold and 1 land</td>
 
-                <td id="banksBuilt">
+                <td id="banksBuiltTwo">
                     
                 </td>
-                <td id="banksUnderConstruction">
+                <td id="banksUnderConstructionTwo">
                     
                 </td>
                 <td>
-                    <input id="buildBankInput"></input> 
+                    <input id="buildBankInputTwo" value="0"></input> 
                 </td>
             </tr>
             <tr>
@@ -346,8 +274,8 @@
                 </td>
             </tr>
         </table>
-        <button id="buildButton">Build</button>
-        <table id="resourcesTable">
+        <button id="buildButtonTwo">Build</button>
+        <table id="resourcesTableTwo">
             <tr><th>Resources</th></tr>
             <tr>
                 <th>
@@ -359,27 +287,27 @@
             </tr>
             <tr>
                 <th>Gold</th>
-                <td id="currentGold">
+                <td id="currentGoldTwo">
                     
                 </td>
-                <td id="goldPerTurn"></td>
+                <td id="goldPerTurnTwo"></td>
             </tr>
             <tr>
                 <th>Food</th>
-                <td id="currentFood">
+                <td id="currentFoodTwo">
                     
                 </td>
-                <td id="foodPerTurn"></td>
+                <td id="foodPerTurnTwo"></td>
             </tr>
             <tr>
                 <th>Land</th>
-                <td id="currentLand">
+                <td id="currentLandTwo">
                     
                 </td>
             </tr>
             
         </table>
-        <table id="militaryTable">
+        <table id="militaryTableTwo">
             <tr><th>Military</th></tr>
             <tr>
                 <th>
@@ -391,126 +319,69 @@
             </tr>
             <tr>
                 <th>Generals</th>
-                <td id="currentGenerals">
+                <td id="currentGeneralsTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitGeneralInput"></input> 
+                    <input id="recruitGeneralInputTwo"></input> 
                 </td>
             </tr>
             <tr>
                 <th>Soldiers</th>
-                <td id="currentSoldiers">
+                <td id="currentSoldiersTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitSoldierInput"></input> 
+                    <input id="recruitSoldierInputTwo"></input> 
                 </td>
 
             </tr>
             <tr>
                 <th>Cavalry</th>
-                <td id="currentCavalry">
+                <td id="currentCavalryTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitCavalryInput"></input> 
+                    <input id="recruitCavalryInputTwo"></input> 
                 </td>
             </tr>
             <tr>
                 <th>Archers</th>
-                <td id="currentArchers">
+                <td id="currentArchersTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitArcherInput"></input> 
+                    <input id="recruitArcherInputTwo"></input> 
                 </td>
             </tr>
             <tr>
                 <th>Trebuchets</th>
-                <td id="currentTrebuchets">
+                <td id="currentTrebuchetsTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitTrebuchetInput"></input> 
+                    <input id="recruitTrebuchetInputTwo"></input> 
                 </td>
             </tr>
             <tr>
                 <th>Dragons</th>
-                <td id="currentDragons">
+                <td id="currentDragonsTwo">
                     
                 </td>
                 <td></td>
                 <td>
-                    <input id="recruitDragonInput"></input> 
+                    <input id="recruitDragonInputTwo"></input> 
                 </td>
             </tr>
             
         </table>
-        <button id="recruitButton">Recruit</button>
-        <table id="opponentsTable">
-            <tr><th>Opponents</th></tr>
-            <tr>
-                <th>
-
-                </th>
-                <th>Military Size</th>
-                <th>Amount of Land</th>
-                <th>Amount of Gold</th>
-                <th>Battle</th>
-            </tr>
-            <tr>
-                <th>Stark</th>
-                <td id="starkArmy">
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    <button class="battleButton" id="stark">Battle!</button> 
-                 </td>
-            </tr>
-            <tr>
-                <th>Lannister</th>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    <button class="battleButton" id="lannister">Battle!</button> 
-                 </td>
-            </tr>
-            <tr>
-                <th>Targaryen</th>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                   <button class="battleButton" id="targaryen">Battle!</button> 
-                </td>
-            </tr>
-           
-        </table>
+        <button id="recruitButtonTwo">Recruit</button> <button class="battleButton" id="stark">Battle!</button> 
+        
 
 
     </div>
