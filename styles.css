@@ -1,9 +1,136 @@
-table, th, td {
-    border: 1px solid;
-  }
+@font-face {
+  font-family: gotfont;
+  src: url(GameofThrones.ttf);
+}
+body{
+  font-family: gotfont;
+  padding: 15px;
+  background-image: url(gotmaphr.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#endDayContainer{
+  padding: 10px;
+}
 
-  #screenContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+button{
+  font-family: gotfont;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+#screenContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#endDayContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#endDayButton {
+  font-size: 24px;
+}
+
+
+#playerOneScreen{
+  padding: 10px;
+}
+
+#playerTwoScreen{
+  padding: 10px;
+}
+
+.lannister {
+  background-color: #930416;
+  color: #eab64d;
+
+  /*
+     lannister color palette:
+     #eab64d	
+#930416	
+#64000d	
+#370003	
+#a32927 */
+}
+.lannister input {
+  background-color: #a32927;
+}
+.lannister button {
+  color: #eab64d;
+  background-color: #370003;
+}
+
+
+.stark{
+
+  background-color:#c9e9ee ;
+  color:#252429 ;
+
+  /* stark color palette
+  #eaeaea	
+#ffffff	
+#4f3e3e	
+#eac57f	
+#c9e9ee */
+}
+.stark input {
+  background-color: #eaeaea;
+}
+.stark button {
+  color: #eaeaea;
+  background-color: #eac57f;
+}
+
+.targaryen{
+
+  background-color:#e54141 ;
+  color: black ;
+
+  /* stark color palette
+  #785353	
+#c94b4b	
+#3c2c2c	
+#e54141	
+#6f4451 */
+}
+.targaryen input {
+  background-color: #785353;
+}
+.targaryen button {
+  color: #c94b4b;
+  background-color: #6f4451;
+}
+
+.martell{
+
+  background-color:#e54141 ;
+  color: black ;
+
+  /* stark color palette
+  #785353	
+#c94b4b	
+#3c2c2c	
+#e54141	
+#6f4451 */
+}
+.martell input {
+  background-color: #785353;
+}
+.martell button {
+  color: #c94b4b;
+  background-color: #6f4451;
+}
