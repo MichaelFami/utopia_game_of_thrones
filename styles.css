@@ -2,7 +2,7 @@
   font-family: gotfont;
   src: url(GameofThrones.ttf);
 }
-body{
+body {
   font-family: gotfont;
   padding: 15px;
   background-image: url(gotmaphr.jpeg);
@@ -10,11 +10,28 @@ body{
   background-size: 100%;
   background-position: center;
 }
-#endDayContainer{
+#titleOfGame{
+  color: white;
+}
+
+#endDayContainer {
   padding: 10px;
 }
 
-button{
+#playerOneInfo {
+  display: flex;
+  
+}
+
+#playerTwoInfo{
+  display: flex;
+  
+}
+.crestImages{
+  width: 100px;
+}
+
+button {
   font-family: gotfont;
 }
 
@@ -45,13 +62,14 @@ td {
   font-size: 24px;
 }
 
-
-#playerOneScreen{
+#playerOneScreen {
   padding: 10px;
+  opacity: 0.8;
 }
 
-#playerTwoScreen{
+#playerTwoScreen {
   padding: 10px;
+  opacity: 0.8;
 }
 
 .lannister {
@@ -74,11 +92,9 @@ td {
   background-color: #370003;
 }
 
-
-.stark{
-
-  background-color:#c9e9ee ;
-  color:#252429 ;
+.stark {
+  background-color: #c9e9ee;
+  color: #252429;
 
   /* stark color palette
   #eaeaea	
@@ -95,10 +111,9 @@ td {
   background-color: #eac57f;
 }
 
-.targaryen{
-
-  background-color:#e54141 ;
-  color: black ;
+.targaryen {
+  background-color: #e54141;
+  color: black;
 
   /* stark color palette
   #785353	
@@ -115,10 +130,9 @@ td {
   background-color: #6f4451;
 }
 
-.martell{
-
-  background-color:#e54141 ;
-  color: black ;
+.martell {
+  background-color: #e54141;
+  color: black;
 
   /* stark color palette
   #785353	

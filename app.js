@@ -585,6 +585,10 @@ let dropDownListTwo = document.querySelector("#houseTwo");
 dropDownListOne.onchange = (e) => {
   let selectedI = dropDownListOne.selectedIndex;
   let chosenHouseOne = dropDownListOne.options[selectedI].value;
+  // let playerCrestSpace= document.querySelector("#playerOneCrest").src
+  // console.log(playerCrestSpace)
+  // console.log(`${chosenHouseOne}.png`)
+  // document.querySelector("#playerOneCrest").src=`${chosenHouseOne}.png`
   document.querySelector("#playerOneScreen").className = "";
   document.querySelector("#playerOneScreen").classList.add(`${chosenHouseOne}`);
 };

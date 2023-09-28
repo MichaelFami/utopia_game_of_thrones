@@ -10,14 +10,20 @@
 </head>
 <body>
     <div class="titleContainer">
-        <h1>Game of Thrones Utopia</h1>
+        <h1 id="titleOfGame">Game of Thrones Utopia</h1>
         
     </div>
     <div id="screenContainer">
         
     <div id="playerOneScreen" class="lannister">
-        <h2>Player One</h2>
+       
+        <div id="playerOneInfo">
+            <h2>Player One</h2>
 
+           
+
+<!-- <img class="crestImages" id="playerOneCrest" src="" alt=""> -->
+        </div>
         <form action="#">
             <label for="houseOne">Select Your House</label>
             <select name="housesOne" id="houseOne">
@@ -27,6 +33,7 @@
             </select>
            
         </form>
+        
         <table id="buildingsTable">
             <tr><th>Buildings</th></tr>
             <tr>
@@ -224,7 +231,15 @@
 
     </div>
     <div id="playerTwoScreen" class="stark">
-        <h2>Player Two</h2>
+
+        <div id="playerTwoInfo">
+
+
+            <h2>Player Two</h2>
+            <!-- <img class="crestImages" id="playerTwoCrest" src="lannister.png" alt=""> -->
+
+        </div>
+
         <form action="#">
             <label for="houseTwo">Select your House</label>
             <select name="housesTwo" id="houseTwo">
